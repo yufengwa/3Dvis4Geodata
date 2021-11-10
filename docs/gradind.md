@@ -14,7 +14,7 @@
 ## 大作业要求
 本课程的大作业要求各个小组根据本课程所学到的可视化工具，在Jupyter Notebook中对一种或多种地球物理数据进行三维可视化展示，最终成果可如下示意图。
 
-![demo](/Lectures/figs/omfvista-demo.gif)
+![demo](./课程笔记/figs/omfvista-demo.gif)
 
 
 ## 小组合作
