@@ -1,0 +1,22 @@
+# Project information
+site_name: 地学数据三维可视化
+#site_url: https://yufengwa.github.io/3Dvis4Geodata/
+site_author: Yufeng Wang
+site_description: >-
+  Create a branded static site from a set of Markdown files to host the
+  documentation of the class notes in 3D visualization for geoscience data.
+# Repository
+repo_name: yufengwa/3Dvis4Geodata
+repo_url: https://github.com/yufengwa/3Dvis4Geodata
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2021 Yufeng Wang
+
+
+
+
+
+
+theme:
+  name: material
