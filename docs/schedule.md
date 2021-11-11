@@ -2,8 +2,8 @@
 
 | Lecture | Date | Topic                                                                           | Exercise |
 |----|------|---------------------------------------------------------------------------------|----------|
-| 1       | 2021.11.09   | 地学数据三维可视化简介   | [Linux(Ubuntu20.04)安装](https://zhuanlan.zhihu.com/p/158363449)和使用 |
-| 2       | 2021.11.12   | 基于Python的开源可视化工具  | [Anaconda安装](https://zhuanlan.zhihu.com/p/94744929)和*conda*的基本使用 |
+| 1       | 2021.11.09   | [地学数据三维可视化简介](https://github.com/yufengwa/3Dvis4Geodata/blob/main/lec01-3dvis-intro/3dvis-intro.ipynb)   | [Linux(Ubuntu20.04)安装](https://zhuanlan.zhihu.com/p/158363449)和使用 |
+| 2       | 2021.11.12   | [基于Python的开源可视化工具](https://github.com/yufengwa/3Dvis4Geodata/blob/main/lec02-3dvis-tools/3dvis-tools.ipynb)  | [Anaconda安装](https://zhuanlan.zhihu.com/p/94744929)和*conda*的基本使用 |
 | 3       | 2021.11.16   | 基于Madagascar的地学数据三维可视化  |[Madagascar安装](https://reproducibility.org/wiki/Advanced_Installation#Ubuntu)和使用 | 
 | 4       | 2021.11.19   | 基于VisPy的地学数据三维可视化    | [VisPy Jupyter Notebook Examples](https://github.com/vispy/vispy/tree/main/examples/jupyter) |
 | 5       | 2021.11.23   | 基于PyVista的地学数据三维可视化    | [Transform 2021: Guide to PyVista](https://github.com/banesullivan/transform-2021) |
