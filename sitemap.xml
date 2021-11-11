@@ -16,7 +16,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://yufengwa.github.io/3Dvis4Geodata/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/3dvis_intro/</loc>
+         <loc>https://yufengwa.github.io/3Dvis4Geodata/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/lec01-3dvis-intro/</loc>
+         <lastmod>2021-11-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://yufengwa.github.io/3Dvis4Geodata/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/lec02-3dvis-tools/</loc>
          <lastmod>2021-11-11</lastmod>
          <changefreq>daily</changefreq>
     </url>

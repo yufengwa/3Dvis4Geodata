@@ -1,0 +1,680 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Create a branded static site from a set of Markdown files to host the documentation of the class notes in 3D visualization for geoscience data.">
+      
+      
+      
+        <meta name="author" content="Yufeng Wang">
+      
+      
+        <link rel="canonical" href="https://yufengwa.github.io/3Dvis4Geodata/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/lec02-3dvis-tools/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>基于Python的开源可视化工具 - 地学数据三维可视化</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="地学数据三维可视化" class="md-header__button md-logo" aria-label="地学数据三维可视化" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            地学数据三维可视化
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              基于Python的开源可视化工具
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/yufengwa/3Dvis4Geodata" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yufengwa/3Dvis4Geodata
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="地学数据三维可视化" class="md-nav__button md-logo" aria-label="地学数据三维可视化" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    地学数据三维可视化
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/yufengwa/3Dvis4Geodata" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yufengwa/3Dvis4Geodata
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        课程主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gradind/" class="md-nav__link">
+        考查方式
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schedule/" class="md-nav__link">
+        课件和授课安排
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          课程笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="课程笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          课程笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lec01-3dvis-intro/" class="md-nav__link">
+        地学数据三维可视化简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          基于Python的开源可视化工具
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        基于Python的开源可视化工具
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    信息可视化和科学可视化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matplotlib" class="md-nav__link">
+    基于Matplotlib的信息可视化工具
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-bokeh" class="md-nav__link">
+    基于Javascript信息可视化工具-Bokeh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-plotly" class="md-nav__link">
+    基于Javascript信息可视化工具-Plotly
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bokeh-vs-plotly" class="md-nav__link">
+    Bokeh vs. Plotly
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    科学可视化工具
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communities" class="md-nav__link">
+    Communities
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    信息可视化和科学可视化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matplotlib" class="md-nav__link">
+    基于Matplotlib的信息可视化工具
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-bokeh" class="md-nav__link">
+    基于Javascript信息可视化工具-Bokeh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-plotly" class="md-nav__link">
+    基于Javascript信息可视化工具-Plotly
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bokeh-vs-plotly" class="md-nav__link">
+    Bokeh vs. Plotly
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    科学可视化工具
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communities" class="md-nav__link">
+    Communities
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="python">基于Python的开源可视化工具</h1>
+<p><img alt="3dvis-tools" src="../figs/landscape-colors.png" /></p>
+<h2 id="_1">信息可视化和科学可视化</h2>
+<ul>
+<li>
+<p>信息可视化<a href="http://ieeevis.org/year/2019/info/call-participation/infovis-paper-types">(InfoVis)</a> visualizes arbitrary and potentially abstract types of information, typically in <strong>2D or 2D+time</strong> plots with axes and numerical scales. </p>
+</li>
+<li>
+<p>科学可视化<a href="http://ieeevis.org/year/2019/info/call-participation/scivis-paper-types">(SciVis)</a> focus on visualizing physically situated gridded data in <strong>3D and 3D+time</strong>, often without spatial axes and instead providing an immersive visual experience of real-world physical datasets (see <a href="https://pdfs.semanticscholar.org/86aa/dffeae1912a404ee66223774d6a45eefb438.pdf">Weiskopf et al</a> for a comparison). </p>
+</li>
+<li>
+<p>Desktop-GUI targeted SciVis tools build on the <strong>OpenGL</strong> graphics standard, while browser-based web applications usually leverage the related <strong>WebGL</strong> graphics standard.</p>
+</li>
+</ul>
+<h2 id="matplotlib">基于Matplotlib的信息可视化工具</h2>
+<ul>
+<li><strong>Strengths</strong>:<ul>
+<li>Designed like MatLab: switching was easy</li>
+<li>Many rendering backends</li>
+<li>Can reproduce just about any plot with a bit of effort</li>
+<li>Well-tested, standard tool for over a decade</li>
+</ul>
+</li>
+<li><strong>Weaknesses</strong>:<ul>
+<li>API is imperative &amp; often overly verbose</li>
+<li>Sometimes poor stylistic defaults</li>
+<li>Poor support for web/interactive graphs</li>
+<li>Often slow for large &amp; complicated data</li>
+</ul>
+</li>
+</ul>
+<h2 id="javascript-bokeh">基于Javascript信息可视化工具-Bokeh</h2>
+<ul>
+<li><strong>Strengths</strong>:<ul>
+<li>Web view/interactivity</li>
+<li>Imperative and Declarative layer</li>
+<li>Handles large and/or streaming datasets</li>
+<li>Geographical visualization</li>
+<li>Fully open source</li>
+</ul>
+</li>
+<li><strong>Weaknesses</strong>:<ul>
+<li>No vector output</li>
+<li>Newer tool with a smaller user-base than matplotlib</li>
+</ul>
+</li>
+</ul>
+<h2 id="javascript-plotly">基于Javascript信息可视化工具-Plotly</h2>
+<ul>
+<li><strong>Strengths</strong>:<ul>
+<li>Web view/interactivity</li>
+<li>Multi-language support</li>
+<li>3D plotting capability</li>
+<li>Animation capability</li>
+<li>Geographical visualization</li>
+</ul>
+</li>
+<li><strong>Weaknesses</strong>:<ul>
+<li>Some features require a paid plan</li>
+</ul>
+</li>
+</ul>
+<h2 id="bokeh-vs-plotly">Bokeh vs. Plotly</h2>
+<ul>
+<li>Use in Jupyter / iPython / scripts<ul>
+<li>both frameworks do a good job for this use case.</li>
+</ul>
+</li>
+<li>Use as a dashboard<ul>
+<li>both frameworks are based on a producer-consumer architecture communicating over JSON</li>
+<li><strong>Bokeh</strong> tends to have more layers of abstraction than <strong>Plotly</strong></li>
+<li>both frameworks integrate with an existing Python-based web server</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">科学可视化工具</h2>
+<ul>
+<li>
+<p>The Visualization Toolkit - <a href="https://vtk.org">VTK</a> (from <a href="https://www.kitware.com/">Kitware</a>) supports manipulating and displaying scientific data by enabling 3D rendering, widgets for 3D interaction, and 2D plotting capability.</p>
+</li>
+<li>
+<p><a href="https://www.paraview.org">ParaView</a> (from <a href="https://www.kitware.com/">Kitware</a>) is an application built on the Visualization Toolkit (VTK) with extensions for distributed computing. ParaView allows users to quickly build visualizations to analyze their data using qualitative and quantitative techniques. The data exploration can be done interactively in 3D or programmatically using batch processing capabilities.</p>
+</li>
+<li>
+<p><a href="https://docs.enthought.com/mayavi/mayavi">Mayavi</a> (from <a href="https://www.enthought.com/">Enthought</a>) is a general purpose, cross-platform tool for 3-D scientific data visualization.</p>
+</li>
+<li>
+<p><a href="http://vispy.org">VisPy</a> is a high-performance interactive 2D/3D data visualization library leveraging the computational power of modern Graphics Processing Units (GPUs) through the OpenGL library to display very large datasets.</p>
+</li>
+<li>
+<p><a href="https://glumpy.github.io">Glumpy</a> is an OpenGL-based interactive visualization library in Python. Its goal is to make it easy to create fast, scalable, beautiful, interactive and dynamic visualizations.</p>
+</li>
+<li>
+<p><a href="http://www.pyvista.org">PyVista</a> is a streamlined interface for the Visualization Toolkit (VTK) providing 3D plotting and mesh analysis with NumPy support being at its core. </p>
+</li>
+<li>
+<p><a href="https://vedo.embl.es">vedo</a> is a lightweight module for scientific analysis and visualization of polygonal meshes, point clouds and volumetric data. It offers an intuitive API which can be combined with VTK seamlessly in a program.</p>
+</li>
+<li>
+<p><a href="https://github.com/InsightSoftwareConsortium/itk-jupyter-widgets">itk-jupyter-widgets</a>, based on the Visualization Toolkit for JavaScript <a href="https://kitware.github.io/vtk-js/index.html">vtk.js</a> and the <a href="https://www.itk.org/">Insight Toolkit (ITK)</a>, provides interactive 3D widgets for Jupyter to visualize and analyze images, point sets, and meshes.</p>
+</li>
+<li>
+<p><a href="https://gr-framework.org">GR</a> is a universal framework for cross-platform visualization applications. It offers developers a compact, portable and consistent graphics library for their programs.</p>
+</li>
+<li>
+<p><a href="https://yt-project.org">yt</a> is a package for analyzing and visualizing volumetric data. yt supports structured, variable-resolution meshes, unstructured meshes, and discrete or sampled data such as particles.</p>
+</li>
+</ul>
+<h2 id="communities">Communities</h2>
+<ul>
+<li>
+<p><a href="https://pyviz.org/index.html"><strong>PyViz</strong></a> is an open platform for helping users decide on the best open-source (OSS) Python data visualization tools for their purposes, with links, overviews, comparisons, and examples.</p>
+</li>
+<li>
+<p><a href="https://holoviz.org/index.html"><strong>HoloViz</strong></a> uses a wide range of open-source Python libraries, but focusing on the tools we help maintain as part of the HoloViz project: Panel, hvPlot, HoloViews, GeoViews, Datashader, Param, and Colorcet.</p>
+</li>
+<li>
+<p><a href="http://ieeevis.org/year/2021/welcome"><strong>IEEEvis</strong></a> is the year’s premier forum for advances in theory, methods, and applications of visualization and visual analytics.</p>
+</li>
+<li>
+<p><a href="http://www.chinavis.org/2022/"><strong>中国可视化与可视分析大会 (ChinaVis)</strong></a> 由我国可视化业界工作者联合发起，宗旨是促进中国及周边地区的可视化与可视分析研究与应用的交流，探讨在大数据时代可视化与可视分析发展的方向与机遇，推动相关研究与应用的发展与进步，推进学科的发展，促进人才培养和交流，加深艺术与技术融合。</p>
+</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../lec01-3dvis-intro/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 地学数据三维可视化简介" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              地学数据三维可视化简介
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Yufeng Wang
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>
