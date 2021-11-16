@@ -6,7 +6,7 @@
 | 2       | 2021.11.12   | [基于Python的开源可视化工具](https://github.com/yufengwa/3Dvis4Geodata/blob/main/lec02-3dvis-tools/3dvis-tools.ipynb)  | [Anaconda安装](https://zhuanlan.zhihu.com/p/94744929)和*conda*的基本使用 |
 | 3       | 2021.11.16   | [基于Madagascar的地学数据三维可视化](https://github.com/yufengwa/3Dvis4Geodata/blob/main/lec03-3dvis-mada/3dvis-mada.ipynb)  |[Madagascar安装](https://reproducibility.org/wiki/Advanced_Installation#Ubuntu)和使用 | 
 | 4       | 2021.11.19   | [基于VisPy的地学数据三维可视化](https://github.com/yufengwa/3Dvis4Geodata/blob/main/lec04-3dvis-vispy/3dvis-vispy.ipynb)     | [VisPy Jupyter Notebook Examples](https://github.com/vispy/vispy/tree/main/examples/jupyter) |
-| 5       | 2021.11.23   | 基于PyVista的地学数据三维可视化    | [Transform 2021: Guide to PyVista](https://github.com/banesullivan/transform-2021) |
-| 6       | 2021.11.26   | 基于vedo的地学数据三维可视化   |[vedo geological model](https://github.com/marcomusy/vedo/blob/master/examples/advanced/geological_model.py)  | 
+| 5       | 2021.11.23   | [基于PyVista的地学数据三维可视化](https://github.com/yufengwa/3Dvis4Geodata/blob/main/lec05-3dvis-pyvista/3dvis-pyvista.ipynb)    | [Transform 2021: Guide to PyVista](https://github.com/banesullivan/transform-2021) |
+| 6       | 2021.11.26   | [基于vedo的地学数据三维可视化](https://github.com/yufengwa/3Dvis4Geodata/blob/main/lec06-3dvis-vedo/3dvis-vedo.ipynb)   |[vedo geological model](https://github.com/marcomusy/vedo/blob/master/examples/advanced/geological_model.py)  | 
 | 7       | 2021.11.30   | 基于ParaView和Mayavi的地学数据三维可视化                    | [Mayavi tutorial](https://github.com/prabhuramachandran/mayavi-tutorial) 和 [Paraview教程视频](https://www.youtube.com/watch?v=OxcU6Upz5ZA&list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-)  | 
 | 8       | 2021.12.03  | 大作业成果展示       | [Presentation with Jupyter Notebook and RISE](https://www.youtube.com/watch?v=T7rVvK4Vc0M) |    
