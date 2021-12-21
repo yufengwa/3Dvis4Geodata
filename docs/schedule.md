@@ -9,4 +9,5 @@
 | 5       | 2021.11.23   | [基于PyVista的地学数据三维可视化](https://github.com/yufengwa/3Dvis4Geodata/blob/main/lec05-3dvis-pyvista/3dvis-pyvista.ipynb)    | [Transform 2021: Guide to PyVista](https://github.com/banesullivan/transform-2021) |
 | 6       | 2021.11.26   | [基于vedo的地学数据三维可视化](https://github.com/yufengwa/3Dvis4Geodata/blob/main/lec06-3dvis-vedo/3dvis-vedo.ipynb)   |[vedo geological model](https://github.com/marcomusy/vedo/blob/master/examples/advanced/geological_model.py)  | 
 | 7       | 2021.11.30   | 基于ParaView和Mayavi的地学数据三维可视化                    | [Mayavi tutorial](https://github.com/prabhuramachandran/mayavi-tutorial) 和 [Paraview教程视频](https://www.youtube.com/watch?v=OxcU6Upz5ZA&list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-)  | 
-| 8       | 2021.12.03  | 大作业成果展示       | [Presentation with Jupyter Notebook and RISE](https://www.youtube.com/watch?v=T7rVvK4Vc0M) |    
+| 8       | 2021.12.03  | 大作业示例和开源数据介绍   | [Geothermal Data Repository](https://gdr.openei.org/home) |    
+| 9       | TBD  | 大作业成果展示       | [Presentation with Jupyter Notebook and RISE](https://www.youtube.com/watch?v=T7rVvK4Vc0M) |    
