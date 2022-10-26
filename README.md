@@ -7,8 +7,8 @@ This repo is for my class note in 3D visualization for geoscience data. The main
 
 ## 授课人员
 
-- 主讲老师: [汪宇锋](https://yufengwa.github.io) - 答疑方式: 地学数据三维可视化课程微信群 (可提前预约当面答疑 - 物探楼411)
-- 助教: 刘学港、何磊、肖梦姿
+- 主讲老师: [汪宇锋](http://grzy.cug.edu.cn/wangyufeng) - 答疑方式: 地学数据三维可视化课程微信群 (可提前预约当面答疑 - 老珠宝楼518)
+- 助教: 甘宁、钟明峰、王世鹏
 
 
 ## 课件和授课安排
@@ -16,13 +16,13 @@ This repo is for my class note in 3D visualization for geoscience data. The main
 | Lecture | Date | Topic                                                                           | Exercise |
 |----|------|---------------------------------------------------------------------------------|----------|
 | 1       | 2022.10.26   | 地学数据三维可视化简介   | [Linux(Ubuntu20.04)安装](https://zhuanlan.zhihu.com/p/158363449)和使用 |
-| 2       | 2021.11.12   | 基于Python的开源可视化工具  | [Anaconda安装](https://zhuanlan.zhihu.com/p/94744929)和*conda*的基本使用 |
-| 3       | 2021.11.16   | 基于Madagascar的地学数据三维可视化  |[Madagascar安装](https://reproducibility.org/wiki/Advanced_Installation#Ubuntu)和使用 | 
-| 4       | 2021.11.19   | 基于VisPy的地学数据三维可视化    | [VisPy Jupyter Notebook Examples](https://github.com/vispy/vispy/tree/main/examples/jupyter) |
-| 5       | 2021.11.23   | 基于PyVista的地学数据三维可视化    | [Transform 2021: Guide to PyVista](https://github.com/banesullivan/transform-2021) |
-| 6       | 2021.11.26   | 基于vedo的地学数据三维可视化   |[vedo geological model](https://github.com/marcomusy/vedo/blob/master/examples/advanced/geological_model.py)  | 
-| 7       | 2021.11.30   | 基于ParaView和Mayavi的地学数据三维可视化                    | [Mayavi tutorial](https://github.com/prabhuramachandran/mayavi-tutorial) 和 [Paraview教程视频](https://www.youtube.com/watch?v=OxcU6Upz5ZA&list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-)  | 
-| 8       | 2021.12.03  | 大作业成果展示       | [Presentation with Jupyter Notebook and RISE](https://www.youtube.com/watch?v=T7rVvK4Vc0M) |    
+| 2       | 2022.11. 02  | 基于Python的开源可视化工具  | [Anaconda安装](https://zhuanlan.zhihu.com/p/94744929)和*conda*的基本使用 |
+| 3       | 2022.11.04   | 基于Madagascar的地学数据三维可视化  |[Madagascar安装](https://reproducibility.org/wiki/Advanced_Installation#Ubuntu)和使用 | 
+| 4       | 2022.11.09   | 基于VisPy的地学数据三维可视化    | [VisPy Jupyter Notebook Examples](https://github.com/vispy/vispy/tree/main/examples/jupyter) |
+| 5       | 2022.11.11   | 基于PyVista的地学数据三维可视化    | [Transform 2021: Guide to PyVista](https://github.com/banesullivan/transform-2021) |
+| 6       | 2022.11.16   | 基于vedo的地学数据三维可视化   |[vedo geological model](https://github.com/marcomusy/vedo/blob/master/examples/advanced/geological_model.py)  | 
+| 7       | 2022.11.23   | 基于ParaView和Mayavi的地学数据三维可视化                    | [Mayavi tutorial](https://github.com/prabhuramachandran/mayavi-tutorial) 和 [Paraview教程视频](https://www.youtube.com/watch?v=OxcU6Upz5ZA&list=PLvkU6i2iQ2fpcVsqaKXJT5Wjb9_ttRLK-)  | 
+| 8       | 2022.11.25  | 大作业成果展示       | [Presentation with Jupyter Notebook and RISE](https://www.youtube.com/watch?v=T7rVvK4Vc0M) |    
 
 
 ## 参考资料
