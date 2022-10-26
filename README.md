@@ -16,7 +16,7 @@ This repo is for my class note in 3D visualization for geoscience data. The main
 | Lecture | Date | Topic                                                                           | Exercise |
 |----|------|---------------------------------------------------------------------------------|----------|
 | 1       | 2022.10.26   | 地学数据三维可视化简介   | [Linux(Ubuntu20.04)安装](https://zhuanlan.zhihu.com/p/158363449)和使用 |
-| 2       | 2022.11. 02  | 基于Python的开源可视化工具  | [Anaconda安装](https://zhuanlan.zhihu.com/p/94744929)和*conda*的基本使用 |
+| 2       | 2022.11.02  | 基于Python的开源可视化工具  | [Anaconda安装](https://zhuanlan.zhihu.com/p/94744929)和*conda*的基本使用 |
 | 3       | 2022.11.04   | 基于Madagascar的地学数据三维可视化  |[Madagascar安装](https://reproducibility.org/wiki/Advanced_Installation#Ubuntu)和使用 | 
 | 4       | 2022.11.09   | 基于VisPy的地学数据三维可视化    | [VisPy Jupyter Notebook Examples](https://github.com/vispy/vispy/tree/main/examples/jupyter) |
 | 5       | 2022.11.11   | 基于PyVista的地学数据三维可视化    | [Transform 2021: Guide to PyVista](https://github.com/banesullivan/transform-2021) |
